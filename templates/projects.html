@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Projects</title>
-    <link rel="icon" href="https://media.istockphoto.com/id/1303269536/vector/d-style-logo-icon-shape.jpg?s=1024x1024&w=is&k=20&c=_-jzc7ltLGlmDNzY57AAHYOW7DTTYrpunXvRhVtf7dk=">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
     <link rel="stylesheet" href="./static/styles.css">
+    <link rel="icon" href="./static/images/letterd.jpg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="./static/styles.js" defer></script>
 </head>
 <body>
     <header>
-        <div>
-            <a href="/">
-                <img src="https://media.istockphoto.com/id/1303269536/vector/d-style-logo-icon-shape.jpg?s=1024x1024&w=is&k=20&c=_-jzc7ltLGlmDNzY57AAHYOW7DTTYrpunXvRhVtf7dk=" alt="Dipec logo" class="logo">
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="/" class="hover-effect" style="margin-right: 30px;">Home</a>
-            <a href="#" class="hover-effect" style="margin-right: 30px;">Projects</a>
-            <a href="#about" class="hover-effect" style="margin-right: 30px;">About</a>
-            <a href="#contact" class="hover-effect" style="margin-right: 30px;">Contact</a>
-        </div>
+        <nav id="nav">
+            <div class="navbar">
+                <a href="/"><img src="./static/images/letterd.jpg" alt="Divine logo"></a>
+                <div class="links">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/#about">About</a>
+                    <a class="nav-link" href="{{url_for('projects')}}">Projects</a>
+                    <a class="nav-link" href="/#contact">Contact</a>
+                </div>
+                <div class=" hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
+    <div class="image">
+        <img src="https://as1.ftcdn.net/v2/jpg/01/16/65/20/1000_F_116652074_jorr8kS4Ll5J1gemdQPBVk7Fv8omwMDV.jpg" alt="Construction image">
+    </div>
 </body>
 </html>
