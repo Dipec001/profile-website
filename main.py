@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, flash, request, abort, session
+from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -17,4 +17,4 @@ def projects():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
