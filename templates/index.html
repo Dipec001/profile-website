@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio">
-    <link rel="stylesheet" href="./static/styles.css">
-    <link rel="icon" href="./static/images/letterd.jpg" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/letterd.jpg') }}" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" src="./static/styles.js" defer></script>
-
+    <script type="module" src="{{ url_for('static', filename='styles.js') }}" defer></script>
     <title>Divine Chukwu</title>
 </head>
 
@@ -19,46 +18,37 @@
     <header>
         <nav id="nav">
             <div class="navbar">
-                <a href="/"><img src="./static/images/letterd.jpg" alt="Divine logo"></a>
+                <a href="/"><img src="{{ url_for('static', filename='images/letterd.jpg') }}" alt="Divine logo"></a>
                 <div class="links">
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="/#about">About</a>
                     <a class="nav-link" href="/projects">Projects</a>
                     <a class="nav-link" href="/#contact">Contact</a>
-                    <a class="nav-link" href="./static/images/myresume.pdf" download>My Resume</a>
+                    <a class="nav-link" href="{{ url_for('static', filename='images/divineresume.pdf') }}">My Resume</a>
                 </div>
-                <div class=" hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
         </nav>
     </header>
 
     <section id="home">
-        <h4>
-            Hello, my name is
-        </h4>
-        <h1>
-           Divine Chukwu
-        </h1>
+        <h4>Hello, my name is</h4>
+        <h1>Divine Chukwu</h1>
         <p class="info">
             I'm a Junior Software Developer based in Nigeria, who's currently working at building some personal projects with different
             programming languages and methods.
-
         </p>
-        <!-- <a class="cv" href="/src/img/resume.pdf" target="_blank">Resume</a> -->
-
     </section>
     <section id="about">
-        <h2>
-            About me
-        </h2>
+        <h2>About me</h2>
         <div class="about-div">
             <div class="projects">
-                <img data-aos="zoom-in" class="about-img" src="./static/images/profile-picture.jpg" alt="Photo of Divine">
-                <a class="project-link" href="/projects.html">Check out my projects</a>
+                <img data-aos="zoom-in" class="about-img" src="{{ url_for('static', filename='images/profile-picture.jpg') }}" alt="Photo of Divine">
+                <a class="project-link" href="/projects">Check out my projects</a>
             </div>
             <div class="info-div">
                 <p class="about-info">
@@ -77,20 +67,16 @@
                     <li>Pandas</li>
                     <li>Flask</li>
                     <li>SQLite</li>
-                    <li>Maplotlib</li>
+                    <li>Matplotlib</li>
                     <li>Selenium</li>
                     <li>HTML</li>
                     <li>CSS</li>
                 </ul>
             </div>
-
-
         </div>
     </section>
     <section id="contact">
-        <h3>
-            Get in touch
-        </h3>
+        <h3>Get in touch</h3>
         <p class="question">
             Got a question or proposal, or just want
             to say hello?
@@ -100,10 +86,10 @@
     <footer>
         <div class="icons">
             <a href="https://www.linkedin.com/in/divine-chukwu-63bb04145/" target="_blank"><img class="icon"
-                    src="./static/images/linkedin-icon.png" alt="Linkedin icon"></a>
-            <a href="https://github.com/Dipec001" target="_blank"><img class="icon" src="./static/images/github-icon.png"
+                    src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="Linkedin icon"></a>
+            <a href="https://github.com/Dipec001" target="_blank"><img class="icon" src="{{ url_for('static', filename='images/github-icon.png') }}"
                     alt="Github icon"></a>
-            <a href="mmailto:dpecchukwu@gmail.com"><img class="icon" src="./static/images/mail-icon.png" alt="Mail icon"></a>
+            <a href="mailto:dpecchukwu@gmail.com"><img class="icon" src="{{ url_for('static', filename='images/mail-icon.png') }}" alt="Mail icon"></a>
         </div>
         <div class="github">
             <a class="github-link" href="https://github.com/Dipec001">Copyright © Divine Chukwu</a>
