@@ -20,11 +20,11 @@
             <div class="navbar">
                 <a href="/"><img src="{{ url_for('static', filename='images/letterd.jpg') }}" alt="Divine logo"></a>
                 <div class="links">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="/#about">About</a>
-                    <a class="nav-link" href="/projects">Projects</a>
-                    <a class="nav-link" href="/#contact">Contact</a>
-                    <a class="nav-link" href="{{ url_for('static', filename='images/divineresume.pdf') }}">My Resume</a>
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                    <a class="nav-link" href="{{ url_for('index') }}#about">About</a>
+                    <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+                    <a class="nav-link" href="{{ url_for('index') }}#contact">Contact</a>
+                    <a class="nav-link" href="{{ url_for('static', filename='images/divineresume.pdf') }}" download>My Resume</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -48,7 +48,7 @@
         <div class="about-div">
             <div class="projects">
                 <img data-aos="zoom-in" class="about-img" src="{{ url_for('static', filename='images/profile-picture.jpg') }}" alt="Photo of Divine">
-                <a class="project-link" href="/projects">Check out my projects</a>
+                <a class="project-link" href="{{ url_for('projects') }}">Check out my projects</a>
             </div>
             <div class="info-div">
                 <p class="about-info">
